@@ -1,0 +1,132 @@
+/* tech.css */
+.main-tech {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 10%;
+    background: linear-gradient(to bottom, #0d2a42, #024059);
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Introduction Section */
+  .tech-intro {
+    max-width: 40%;
+    text-align: left;
+  }
+  
+  .tech-intro h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f3f4f5;
+  }
+  
+  .tech-intro p {
+    font-size: 1.2rem;
+    color: #d3cfcf;
+    line-height: 1.6;
+  }
+  
+  /* Technology List */
+  .tech-list {
+    flex: 1;
+    border-left: 3px solid #e6eced; /* Row line to group the list */
+    padding-left: 30px;
+  }
+  
+  .tech-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .tech-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tech-list li:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tech-list li svg {
+    font-size: 2rem;
+    color: #e0e3e3;
+  }
+  
+  .tech-list h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f3f5f6;
+  }
+  
+  .tech-list p {
+    font-size: 1rem;
+    color: #c9c6c6;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .main-tech {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .tech-intro {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .tech-list {
+      border-left: none;
+      padding-left: 0;
+    }
+  
+    .tech-list ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .tech-list li {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .tech-intro h3 {
+      font-size: 1.8rem;
+    }
+  
+    .tech-intro p {
+      font-size: 1.1rem;
+    }
+  
+    .tech-list h4 {
+      font-size: 1.2rem;
+    }
+  
+    .tech-list p {
+      font-size: 1rem;
+    }
+  
+    .tech-list ul {
+      gap: 15px;
+    }
+  
+    .tech-list li {
+      width: 90%;
+      padding: 15px;
+    }
+  }
+  
