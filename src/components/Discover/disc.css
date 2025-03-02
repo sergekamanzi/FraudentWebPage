@@ -1,0 +1,117 @@
+.main-disc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Purple Shadow Effect */
+.main-disc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.disc-img {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+}
+
+.disc-img img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(128, 0, 128, 0.5);
+    border-top-left-radius: 70px;
+}
+
+.disc-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+}
+
+.disc-content h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.disc-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.disc-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.disc-content ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.disc-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #017b8b;
+    font-weight: bold;
+}
+
+.disc-btn button {
+    background: #499b60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.disc-btn button:hover {
+    background: #21b24b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-disc {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .disc-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .disc-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .disc-content p, .disc-content ul li {
+        font-size: 0.9rem;
+    }
+    
+    .disc-btn button {
+        font-size: 0.9rem;
+    }
+}
