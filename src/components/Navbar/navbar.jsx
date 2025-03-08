@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src={logo2} alt="Logo" />
+        <a href="#home"><img src={logo2} alt="Logo" /></a>
       </div>
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
         <ul>
