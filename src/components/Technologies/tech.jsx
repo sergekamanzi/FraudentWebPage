@@ -1,9 +1,10 @@
-import "./tech.css"
+import "./tech.css";
 import { GiGearStickPattern } from "react-icons/gi";
 import { FaDatabase } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { MdFlashOn } from "react-icons/md";
 import { BsShieldFillCheck } from "react-icons/bs";
+
 const tech = () => {
   return (
     <div className="main-tech">
@@ -43,7 +44,7 @@ const tech = () => {
            </ul>
         </div>
     </div>
-  )
-}
+  );
+};
 
-export default tech
+export default tech;

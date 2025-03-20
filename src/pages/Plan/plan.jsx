@@ -1,12 +1,27 @@
 import "./plan.css";
+import { useNavigate } from "react-router-dom"; // Import for navigation
 
 const Plan = () => {
+  const navigate = useNavigate(); // Initialize navigate
+
+  // Function to handle close button click
+  const handleClose = () => {
+    navigate("/"); // Navigate back to landing page
+  };
+
   return (
     <div className="plan-container">
-      <h1 className="plan-title">Choose the Perfect Fraud Detection Plan for Your Business</h1>
-      <p className="plan-subtitle">
-        Empower your organization with solutions tailored for effective fraud protection, no matter your size.
-      </p>
+      {/* Close button added here */}
+      <div className="close-button" onClick={handleClose}>
+        ✕
+      </div>
+      
+      <div className="plan-header">
+        <h1 className="plan-title">Choose the Perfect Fraud Detection Plan for Your Business</h1>
+        <p className="plan-subtitle">
+          Empower your organization with solutions tailored for effective fraud protection, no matter your size.
+        </p>
+      </div>
 
       <div className="plan-cards">
         {/* Basic Plan */}

@@ -11,9 +11,9 @@ const Disc = () => {
         <img src={he} alt="Fraud Detection" />
       </div>
       <div className="disc-content">
-        <h3>Elevate Your Security With Fraud-Shield&#39;s Expertise</h3>
+        <h3>Elevate Your Security With Fraud-Shield&apos;s Expertise</h3>
         <p>
-          Enhance your business&#39;s security posture through qwerty&#39;s advanced
+          Enhance your business&apos;s security posture through qwerty&apos;s advanced
           fraud detection technology, designed for professional environments. Our platform
           adeptly identifies and prevents fraudulent activities, enabling swift and decisive action.
         </p>

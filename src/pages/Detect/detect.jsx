@@ -1,16 +1,48 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./detect.css";
+import { IoIosArrowForward } from "react-icons/io";
 
 const DetectPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
   };
 
+  const returnToLanding = () => {
+    navigate('/');
+  };
+
   return (
     <div className="detect-container">
-      <button className="open-btn" onClick={togglePopup}>Detect Fraud</button>
+      <div className="header">
+        <button className="close-landing-btn" onClick={returnToLanding}>&times;</button>
+      </div>
+      
+      <button className="open-btn" onClick={togglePopup}>Detect Fraud<IoIosArrowForward />
+      </button>
+      
+      <div className="instructions">
+        <h3>How to Use the Fraud Detection Tool</h3>
+        <ol>
+          <li>Click the &quot;Detect Fraud&quot; button above to open the detection form</li>
+          <li>Enter the Time Step number for the transaction</li>
+          <li>Select the type of transaction from the dropdown menu</li>
+          <li>Input the transaction amount</li>
+          <li>Enter the account balances before and after the transaction:
+            <ul>
+              <li>Old Balance Origin: The sender&apos;s balance before the transaction</li>
+              <li>New Balance Origin: The sender&apos;s balance after the transaction</li>
+              <li>Old Balance Destination: The recipient&apos;s balance before the transaction</li>
+              <li>New Balance Destination: The recipient&apos;s balance after the transaction</li>
+            </ul>
+          </li>
+          <li>Click &quot;Detect Fraud&quot; to analyze the transaction</li>
+        </ol>
+      </div>
+      
       {isOpen && (
         <div className="popup-overlay">
           <div className="popup-box">

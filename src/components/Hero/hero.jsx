@@ -1,7 +1,10 @@
 import "./hero.css"
 import { FaShieldAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import hero2 from "/hero2.png"
 const hero = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const navigate = useNavigate();
   return (
     <div className="main-hero">
        <div className="hero-content">
@@ -10,7 +13,7 @@ const hero = () => {
             system. Get instant alerts and prevent financial losses before they happen.
             </p>
             <div className="hero-btn">
-                <button className="btn1"><FaShieldAlt /> Detect fraud now</button>
+                <button onClick={() => navigate("/detect")} className="btn1"><FaShieldAlt /> Detect fraud now</button>
                 <button className="btn2">Learn more</button>
             </div>
        </div>

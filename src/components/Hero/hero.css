@@ -4,7 +4,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 60px 10%;
-    background: linear-gradient(to bottom, #0d2a42, #024059);
+   background: linear-gradient(to bottom, #0d2a42, #024059);
+   /*background-image: url("/banner-5.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;*/
     color: white;
     height: 500px;
   }
@@ -64,7 +68,7 @@
   }
   
   .hero-img {
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

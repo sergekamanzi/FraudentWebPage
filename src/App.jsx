@@ -8,25 +8,26 @@ import Video from './components/Video/video';
 import Discover from './components/Discover/disc';
 import Contact from './components/Contact/contact';
 import Plan from './pages/Plan/plan';
-//import Detect from './pages/Detect/detect';
+import Detect from './pages/Detect/detect';
 function App() {
   return (
     <Router>
-      <Navbar />
+      
       <Routes>
         <Route path="/" element={
           <>
+            <Navbar />
             <Hero />
             <About />
             <Technologies />
             <Video />
             <Discover />
-            
+            <Contact />    
           </>
         } />
-        <Route path="/plan" element={<Plan />} />
+         <Route path="/plan" element={<Plan />} />
+         <Route path="/detect" element={<Detect />} />
       </Routes>
-      <Contact />
     </Router>
   );
 }

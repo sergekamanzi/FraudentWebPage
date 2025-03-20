@@ -39,7 +39,8 @@
   }
   
   .nav-links ul li a:hover {
-    color: #f39c12;
+    /*color: #f39c12;*/
+    color: rgb(25, 164, 115);
   }
   
   /* Hamburger Menu */
