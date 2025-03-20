@@ -1,7 +1,7 @@
 import "./hero.css"
 import { FaShieldAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import hero2 from "/hero2.png"
+import hero2 from "/home1.png"
 const hero = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const navigate = useNavigate();

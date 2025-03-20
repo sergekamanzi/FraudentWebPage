@@ -1,121 +1,189 @@
 /* hero.css */
 .main-hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 10%;
-   background: linear-gradient(to bottom, #0d2a42, #024059);
-   /*background-image: url("/banner-5.jpg");
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;*/
-    color: white;
-    height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background: linear-gradient(to bottom, #0d2a42, #024059);
+  color: white;
+  min-height: 500px;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h2 {
+  font-size: 3.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 15px;
+}
+
+.btn1, .btn2 {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn1 {
+  background: #21b24b;
+  color: rgb(2, 2, 2);
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn1:hover {
+  background: #1a913c;
+}
+
+.btn2 {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.btn2:hover {
+  background: white;
+  color: #024059;
+}
+
+.hero-img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: auto;
+  height: 75vh;
+  margin-bottom: -70px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero-content h2 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-img img {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-hero {
+    flex-direction: row; /* Keep row layout */
+    padding: 40px 5%;
   }
   
   .hero-content {
-    max-width: 50%;
+    max-width: 55%;
   }
   
   .hero-content h2 {
-    font-size: 3.3rem;
-    font-weight: bold;
-    margin-bottom: 15px;
+    font-size: 2.2rem;
   }
   
   .hero-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
+    font-size: 1rem;
   }
   
-  .hero-btn {
-    display: flex;
-    gap: 15px;
+  .hero-img {
+    width: 45%;
+  }
+  
+  .hero-img img {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-hero {
+    flex-direction: row; /* Maintain row layout */
+    padding: 30px 5%;
+    align-items: center;
+  }
+  
+  .hero-content {
+    max-width: 55%;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
   }
   
   .btn1, .btn2 {
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    padding: 10px 16px;
+    font-size: 0.85rem;
   }
   
-  .btn1 {
-    background: #21b24b;
-    color: rgb(2, 2, 2);
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  .hero-img {
+    width: 45%;
   }
   
-  .btn1:hover {
-    background: #1a913c;
+  .hero-img img {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-hero {
+    flex-direction: column; /* Finally switch to column at very small screens */
+    padding: 30px 5%;
+    text-align: center;
   }
   
-  .btn2 {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 20px;
   }
   
-  .btn2:hover {
-    background: white;
-    color: #024059;
+  .hero-btn {
+    justify-content: center;
   }
   
   .hero-img {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   
   .hero-img img {
-    width: 100%;
-    max-width: 400px;
+    max-height: 200px;
+    margin-bottom: 50px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .main-hero {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .hero-content {
-      max-width: 100%;
-    }
-  
-    .hero-btn {
-      justify-content: center;
-    }
-  
-    .hero-img {
-      width: 100%;
-      margin-top: 20px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .hero-content h2 {
-      font-size: 2rem;
-    }
-  
-    .hero-content p {
-      font-size: 1rem;
-    }
+}
 
-    .hero-img img {
-      margin-top: -200px;
-    }
-  
-    .btn1, .btn2 {
-      font-size: 0.9rem;
-      padding: 10px 20px;
-    }
+/* Additional fix for very small screens */
+@media (max-width: 360px) {
+  .hero-btn {
+    flex-direction: column;
+    width: 100%;
   }
   
+  .btn1, .btn2 {
+    width: 100%;
+    justify-content: center;
+  }
+}
