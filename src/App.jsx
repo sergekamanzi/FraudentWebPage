@@ -9,6 +9,7 @@ import Discover from './components/Discover/disc';
 import Contact from './components/Contact/contact';
 import Plan from './pages/Plan/plan';
 import Detect from './pages/Detect/detect';
+import Retrain from './pages/Retrain/retrain';
 function App() {
   return (
     <Router>
@@ -27,6 +28,7 @@ function App() {
         } />
          <Route path="/plan" element={<Plan />} />
          <Route path="/detect" element={<Detect />} />
+         <Route path="/retrain" element={<Retrain />} />
       </Routes>
     </Router>
   );

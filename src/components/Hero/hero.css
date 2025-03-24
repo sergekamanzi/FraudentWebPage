@@ -151,7 +151,7 @@
 
 @media (max-width: 576px) {
   .main-hero {
-    flex-direction: column; /* Finally switch to column at very small screens */
+    flex-direction: column;
     padding: 30px 5%;
     text-align: center;
   }

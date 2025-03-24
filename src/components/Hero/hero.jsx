@@ -1,6 +1,7 @@
 import "./hero.css"
 import { FaShieldAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { TfiReload } from "react-icons/tfi";
 import hero2 from "/home1.png"
 const hero = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -14,7 +15,7 @@ const hero = () => {
             </p>
             <div className="hero-btn">
                 <button onClick={() => navigate("/detect")} className="btn1"><FaShieldAlt /> Detect fraud now</button>
-                <button className="btn2">Learn more</button>
+                <button onClick={() => navigate("/retrain")} className="btn2">Retrain<TfiReload /></button>
             </div>
        </div>
        <div className="hero-img">
