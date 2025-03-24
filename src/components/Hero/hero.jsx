@@ -16,7 +16,6 @@ const hero = () => {
             <div className="hero-btn">
                 <button onClick={() => navigate("/detect")} className="btn1"><FaShieldAlt /> Detect fraud now</button>
                 <button onClick={() => navigate("/retrain")} className="btn2">Retrain<TfiReload /></button>
-                <button className="btn2">Retrain<TfiReload /></button>
             </div>
        </div>
        <div className="hero-img">
