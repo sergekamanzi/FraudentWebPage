@@ -64,7 +64,7 @@ const DetectPopup = () => {
     };
 
     try {
-      const response = await fetch("https://fraud-backend-ndx4.onrender.com//predict", {
+      const response = await fetch("https://fraud-backend-ndx4.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
