@@ -1,41 +1,50 @@
 .retrain-container {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 50vh;
+  background-color: #f4f4f4;
+  position: relative;
 }
 
-.close-btn {
-  font-size: 24px;
-  background: none;
-  border: none;
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
 }
 
-.upload-section {
-  margin: 20px 0;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.retrain-btn {
-  background-color: #4caf50;
-  color: white;
+input[type='file'] {
+  margin-bottom: 20px;
+}
+
+button {
   padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
   border: none;
   border-radius: 5px;
-  cursor:  pointer;
-  margin-left: 10px;
+  cursor: pointer;
 }
 
-.retrain-btn:hover {
-  background-color: #45a049;
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-.message {
-  margin-top: 10px;
+.status-message {
+  margin-top: 20px;
+  font-size: 1.2rem;
   color: #333;
+}
+
+.results {
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
