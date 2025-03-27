@@ -1,7 +1,6 @@
-// retrain.jsx
 import { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Add this import
+import { useNavigate } from 'react-router-dom';
 import './retrain.css';
 
 const Retrain = () => {
@@ -10,7 +9,7 @@ const Retrain = () => {
   const [testAccuracy, setTestAccuracy] = useState(null);
   const [trainingEpochs, setTrainingEpochs] = useState(null);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate(); // Add this for navigation
+  const navigate = useNavigate();
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -42,12 +41,12 @@ const Retrain = () => {
   };
 
   const handleClose = () => {
-    navigate('/'); // Redirects to landing page (assuming '/' is your landing page route)
+    navigate('/');
   };
 
   return (
     <div className="retrain-container">
-      <div className="close-button" onClick={handleClose}>✖</div> {/* Add close button */}
+      <div className="close-button" onClick={handleClose}>✖</div>
       <h1>Retrain Fraud Detection Model</h1>
       <input type="file" accept=".csv" onChange={handleFileChange} />
       <button onClick={handleRetrain} disabled={loading}>
@@ -56,7 +55,7 @@ const Retrain = () => {
       {statusMessage && <p className="status-message">{statusMessage}</p>}
       {testAccuracy !== null && (
         <div className="results">
-          <p>Test Accuracy: {testAccuracy}</p>
+          <p>Test Accuracy: {testAccuracy.toFixed(6)}</p>
           <p>Training Epochs: {trainingEpochs}</p>
         </div>
       )}
