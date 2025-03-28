@@ -1,11 +1,9 @@
 .retrain-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  background-color: #f4f4f4;
-  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 .close-button {
@@ -13,20 +11,20 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 h1 {
-  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-input[type='file'] {
+input[type="file"] {
   margin-bottom: 20px;
 }
 
 button {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #28a745;
   color: white;
   border: none;
   border-radius: 5px;
@@ -34,17 +32,29 @@ button {
 }
 
 button:disabled {
-  background-color: #ccc;
+  background-color: #cccccc;
   cursor: not-allowed;
 }
 
 .status-message {
   margin-top: 20px;
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 16px;
 }
 
 .results {
   margin-top: 20px;
-  font-size: 1.2rem;
+}
+
+.plot {
+  margin-top: 30px;
+}
+
+.plot h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.plot img {
+  max-width: 100%;
+  height: auto;
 }
