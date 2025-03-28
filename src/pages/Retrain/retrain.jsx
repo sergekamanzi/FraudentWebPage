@@ -8,6 +8,8 @@ const Retrain = () => {
   const [statusMessage, setStatusMessage] = useState('');
   const [testAccuracy, setTestAccuracy] = useState(null);
   const [trainingEpochs, setTrainingEpochs] = useState(null);
+  const [correlationHeatmap, setCorrelationHeatmap] = useState(null);
+  const [confusionMatrix, setConfusionMatrix] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -30,10 +32,14 @@ const Retrain = () => {
       const response = await axios.post('https://fraud-backend-283k.onrender.com/retrain', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
+      console.log('API Response:', response.data); // Debug log
       setTestAccuracy(response.data.test_accuracy);
       setTrainingEpochs(response.data.training_epochs);
+      setCorrelationHeatmap(response.data.correlation_heatmap);
+      setConfusionMatrix(response.data.confusion_matrix);
       setStatusMessage('Model retrained successfully!');
     } catch (error) {
+      console.error('Error during retraining:', error); // Debug log
       setStatusMessage(`Error during retraining: ${error.response ? error.response.data.detail : error.message}`);
     } finally {
       setLoading(false);
@@ -58,6 +64,22 @@ const Retrain = () => {
           <p>Test Accuracy: {testAccuracy.toFixed(6)}</p>
           <p>Training Epochs: {trainingEpochs}</p>
         </div>
+      )}
+      {correlationHeatmap ? (
+        <div className="plot">
+          <h2>Correlation Heatmap</h2>
+          <img src={correlationHeatmap} alt="Correlation Heatmap" style={{ maxWidth: '100%' }} />
+        </div>
+      ) : (
+        <p>No correlation heatmap available.</p>
+      )}
+      {confusionMatrix ? (
+        <div className="plot">
+          <h2>Confusion Matrix</h2>
+          <img src={confusionMatrix} alt="Confusion Matrix" style={{ maxWidth: '100%' }} />
+        </div>
+      ) : (
+        <p>No confusion matrix available.</p>
       )}
     </div>
   );
